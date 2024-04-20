@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+let Searchbox = () =>{
+  return (
+    <div className="searchBox" style={{margin: "auto", width: "50%" , paddingTop : "160px", paddingLeft : "30%"}}>   
+    <label>name 
+    <br></br>
+    <br></br>
+    <input type="text" name="name" /> <br></br>
+    <br></br>
+    </label>
+    <input type="submit" />
+    </div>
+ 
+  )
+}
+
+const Heading  = () => {
+  return(
+    <>
+    <div className="title">
+      <img style={{backgroundColor:"cyan", width:"60px", float:"right"}} src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" />
+      <img style={{backgroundColor:"cyan", width:"60px",float:"left"}} src="data:image/png;base64,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" />
+      <Searchbox />   
+    </div>
+    </>
+  )
+}
+let root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Heading />);
